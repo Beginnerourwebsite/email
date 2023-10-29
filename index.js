@@ -4,19 +4,20 @@ const app = express()
 
 const port = process.env.PORT || 5000
 
+// yrli xpvc xuyw pnov
 // !important! 
 // you need to install the following libraries |express|[dotenv > if required]
 // or run this command >> npm i express dotenv 
 app.get("/",(req,res)=>{
   res.send("<h1>radhe</h1>")
 })
-app.get('data/:Email/:pass/:user/:subject/:message' , (req , res)=>{
+app.get('/:Email/:pass/:user/:subject/:message' , (req , res)=>{
   let email=req.params.Email
   let password=req.params.pass
   let user=req.params.user
   let message=req.params.message
   let subject=req.params.subject
-  
+  console.log(email)
   const transporter = nodemailer.createTransport({
       service: 'gmail', // e.g., 'Gmail' or use your own SMTP server
       auth: {

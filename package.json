@@ -8,7 +8,7 @@
   },
   "name": "node",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "builds": "netlify deploy --prod",
     "start":"node index.js",
